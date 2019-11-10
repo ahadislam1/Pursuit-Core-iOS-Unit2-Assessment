@@ -38,11 +38,35 @@ class DetailViewController: UIViewController {
         blueSlider.value = Float(crayon.blue)
 
         view.backgroundColor = UIColor(displayP3Red: CGFloat(crayon.red / 255), green: CGFloat(crayon.green / 255), blue: CGFloat(crayon.blue) / 255, alpha: 1)
-        
-        // Do any additional setup after loading the view.
     }
     
+    @IBAction func redSliderChange(_ sender: UISlider) {
+        redLabel.text = "Red \(String(format: "%.1f", sender.value))"
+        view.backgroundColor = UIColor(displayP3Red: CGFloat(redSlider.value / 255), green: CGFloat(greenSlider.value / 255), blue: CGFloat(blueSlider.value) / 255, alpha: CGFloat(alphaStepper.value))
+        
+    }
+    @IBAction func greenSliderChange(_ sender: UISlider) {
+        greenLabel.text = "Green \(String(format: "%.1f", sender.value))"
+        view.backgroundColor = UIColor(displayP3Red: CGFloat(redSlider.value / 255), green: CGFloat(greenSlider.value / 255), blue: CGFloat(blueSlider.value) / 255, alpha: CGFloat(alphaStepper.value))
 
+        
+    }
+    @IBAction func blueSliderChange(_ sender: UISlider) {
+        blueLabel.text = "Blue \(String(format: "%.1f", sender.value))"
+        view.backgroundColor = UIColor(displayP3Red: CGFloat(redSlider.value / 255), green: CGFloat(greenSlider.value / 255), blue: CGFloat(blueSlider.value) / 255, alpha: CGFloat(alphaStepper.value))
+
+
+    }
+    
+    @IBAction func alphaStepChange(_ sender: UIStepper) {
+        alphaLabel.text = "Alpha \(String(format: "%.1f", sender.value))"
+        view.backgroundColor = UIColor(displayP3Red: CGFloat(redSlider.value / 255), green: CGFloat(greenSlider.value / 255), blue: CGFloat(blueSlider.value) / 255, alpha: CGFloat(alphaStepper.value))
+    }
+    
+    @IBAction func resetBackgroundColor(_ sender: UIButton) {
+        view.backgroundColor = UIColor(displayP3Red: CGFloat(crayon.red / 255), green: CGFloat(crayon.green / 255), blue: CGFloat(crayon.blue) / 255, alpha: 1)
+    }
+    
     /*
     // MARK: - Navigation
 
