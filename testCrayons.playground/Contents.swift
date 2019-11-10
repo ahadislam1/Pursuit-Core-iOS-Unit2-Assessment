@@ -17,5 +17,5 @@ class Crayon {
 }
 
 let blue = Crayon(name: "Blue", red: 31, green: 117, blue: 254, hex: "#1F75FE")
-let x: CGFloat = CGFloat(blue.red)
+let x: CGFloat = CGFloat(blue.red / 255)
 

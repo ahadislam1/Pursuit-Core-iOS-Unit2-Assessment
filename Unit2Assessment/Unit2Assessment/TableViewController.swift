@@ -32,6 +32,7 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        
         return crayons.count
     }
     
@@ -86,14 +87,18 @@ class TableViewController: UITableViewController {
      }
      */
     
-    /*
+    
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+        
+        guard let tappedTableCell = sender as? UITableViewCell else { return }
+        guard let cellIndexPath = tableView.indexPath(for: tappedTableCell) else { return }
+        if let crayonDetail = segue.destination as? DetailViewController {
+            crayonDetail.crayon = crayons[cellIndexPath.row]
+        }
+    }
 }
