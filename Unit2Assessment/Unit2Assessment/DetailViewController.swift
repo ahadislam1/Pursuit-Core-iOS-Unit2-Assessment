@@ -11,22 +11,23 @@ import UIKit
 class DetailViewController: UIViewController {
     
     var crayon: Crayon!
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var redLabel: UILabel!
     @IBOutlet weak var greenLabel: UILabel!
     @IBOutlet weak var blueLabel: UILabel!
     @IBOutlet weak var alphaLabel: UILabel!
-    
     @IBOutlet weak var redSlider: UISlider!
-    @IBOutlet weak var blueSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
-    
+    @IBOutlet weak var blueSlider: UISlider!
     @IBOutlet weak var alphaStepper: UIStepper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setColortoCrayon()
+    }
+    
+    fileprivate func setColortoCrayon() {
         titleLabel.text = crayon.name
         redLabel.text = "Red \(crayon.red)"
         greenLabel.text = "Green \(crayon.green)"
@@ -34,37 +35,27 @@ class DetailViewController: UIViewController {
         alphaLabel.text = "Alpha \(1)"
         
         redSlider.value = Float(crayon.red)
-        greenSlider.value = Float(crayon.green)
-        blueSlider.value = Float(crayon.blue)
-
+        blueSlider.value = Float(crayon.green)
+        greenSlider.value = Float(crayon.blue)
+        
         view.backgroundColor = UIColor(displayP3Red: CGFloat(crayon.red / 255), green: CGFloat(crayon.green / 255), blue: CGFloat(crayon.blue) / 255, alpha: 1)
     }
     
-    @IBAction func redSliderChange(_ sender: UISlider) {
-        redLabel.text = "Red \(String(format: "%.1f", sender.value))"
-        view.backgroundColor = UIColor(displayP3Red: CGFloat(redSlider.value / 255), green: CGFloat(greenSlider.value / 255), blue: CGFloat(blueSlider.value) / 255, alpha: CGFloat(alphaStepper.value))
+    @IBAction func sliderChange(_ sender: UISlider) {
+        redLabel.text = "Red \(String(format: "%.1f", redSlider.value))"
+        greenLabel.text = "Green \(String(format: "%.1f", greenSlider.value))"
+        blueLabel.text = "Blue \(String(format: "%.1f", blueSlider.value))"
+        view.backgroundColor = UIColor(displayP3Red: CGFloat(redSlider.value / 255), green: CGFloat(blueSlider.value / 255), blue: CGFloat(greenSlider.value) / 255, alpha: CGFloat(alphaStepper.value))
         
-    }
-    @IBAction func greenSliderChange(_ sender: UISlider) {
-        greenLabel.text = "Green \(String(format: "%.1f", sender.value))"
-        view.backgroundColor = UIColor(displayP3Red: CGFloat(redSlider.value / 255), green: CGFloat(greenSlider.value / 255), blue: CGFloat(blueSlider.value) / 255, alpha: CGFloat(alphaStepper.value))
-
-        
-    }
-    @IBAction func blueSliderChange(_ sender: UISlider) {
-        blueLabel.text = "Blue \(String(format: "%.1f", sender.value))"
-        view.backgroundColor = UIColor(displayP3Red: CGFloat(redSlider.value / 255), green: CGFloat(greenSlider.value / 255), blue: CGFloat(blueSlider.value) / 255, alpha: CGFloat(alphaStepper.value))
-
-
     }
     
     @IBAction func alphaStepChange(_ sender: UIStepper) {
         alphaLabel.text = "Alpha \(String(format: "%.1f", sender.value))"
-        view.backgroundColor = UIColor(displayP3Red: CGFloat(redSlider.value / 255), green: CGFloat(greenSlider.value / 255), blue: CGFloat(blueSlider.value) / 255, alpha: CGFloat(alphaStepper.value))
+        view.backgroundColor = UIColor(displayP3Red: CGFloat(redSlider.value / 255), green: CGFloat(blueSlider.value / 255), blue: CGFloat(greenSlider.value) / 255, alpha: CGFloat(alphaStepper.value))
     }
     
     @IBAction func resetBackgroundColor(_ sender: UIButton) {
-        view.backgroundColor = UIColor(displayP3Red: CGFloat(crayon.red / 255), green: CGFloat(crayon.green / 255), blue: CGFloat(crayon.blue) / 255, alpha: 1)
+        setColortoCrayon()
     }
     
     /*

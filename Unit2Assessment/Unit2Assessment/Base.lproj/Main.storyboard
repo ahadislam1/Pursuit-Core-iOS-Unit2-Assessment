@@ -75,13 +75,13 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="127.5" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="88z-B4-jGW">
                                 <rect key="frame" x="18" y="176" width="290" height="31"/>
                                 <connections>
-                                    <action selector="redSliderChange:" destination="vDZ-Sq-JWX" eventType="valueChanged" id="IgR-4y-JDv"/>
+                                    <action selector="sliderChange:" destination="vDZ-Sq-JWX" eventType="valueChanged" id="IgR-4y-JDv"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Bkm-eb-Ycy">
                                 <rect key="frame" x="18" y="243" width="290" height="31"/>
                                 <connections>
-                                    <action selector="greenSliderChange:" destination="vDZ-Sq-JWX" eventType="valueChanged" id="Jjg-QT-BSm"/>
+                                    <action selector="sliderChange:" destination="vDZ-Sq-JWX" eventType="valueChanged" id="2lm-s3-kXm"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pB4-YH-ZAe">
@@ -93,7 +93,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="4kz-ku-3b3">
                                 <rect key="frame" x="18" y="310" width="290" height="31"/>
                                 <connections>
-                                    <action selector="blueSliderChange:" destination="vDZ-Sq-JWX" eventType="valueChanged" id="hId-Kb-dZS"/>
+                                    <action selector="sliderChange:" destination="vDZ-Sq-JWX" eventType="valueChanged" id="GKS-Ng-Dad"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r28-0x-NjD">
@@ -168,9 +168,9 @@
                         <outlet property="alphaLabel" destination="Oye-2e-Pkm" id="Cia-gt-LjH"/>
                         <outlet property="alphaStepper" destination="aSR-am-zAe" id="Js6-5u-u3F"/>
                         <outlet property="blueLabel" destination="4H0-aF-cqL" id="SLm-pu-hNZ"/>
-                        <outlet property="blueSlider" destination="Bkm-eb-Ycy" id="aaa-z5-rMm"/>
+                        <outlet property="blueSlider" destination="4kz-ku-3b3" id="b83-bU-kCm"/>
                         <outlet property="greenLabel" destination="r28-0x-NjD" id="Ie7-sB-XTF"/>
-                        <outlet property="greenSlider" destination="4kz-ku-3b3" id="b83-bU-kCm"/>
+                        <outlet property="greenSlider" destination="Bkm-eb-Ycy" id="aaa-z5-rMm"/>
                         <outlet property="redLabel" destination="pB4-YH-ZAe" id="2lO-dX-fy1"/>
                         <outlet property="redSlider" destination="88z-B4-jGW" id="Ep1-k3-wbN"/>
                         <outlet property="titleLabel" destination="yfd-wO-oX9" id="T4R-oE-OYD"/>
