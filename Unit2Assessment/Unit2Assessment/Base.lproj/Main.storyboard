@@ -121,8 +121,8 @@
                                     <action selector="resetBackgroundColor:" destination="vDZ-Sq-JWX" eventType="touchUpInside" id="HBL-bb-zZ1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alpha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oye-2e-Pkm">
-                                <rect key="frame" x="20" y="417" width="165" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alpha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oye-2e-Pkm">
+                                <rect key="frame" x="20" y="417" width="286" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -150,7 +150,7 @@
                             <constraint firstItem="Bkm-eb-Ycy" firstAttribute="centerX" secondItem="88z-B4-jGW" secondAttribute="centerX" id="UZQ-Us-LNd"/>
                             <constraint firstItem="dLV-86-qRm" firstAttribute="centerX" secondItem="JVM-iP-4f6" secondAttribute="centerX" id="YjQ-d1-xtr"/>
                             <constraint firstItem="Bkm-eb-Ycy" firstAttribute="top" secondItem="pB4-YH-ZAe" secondAttribute="bottom" constant="8" id="aZu-Dc-Daa"/>
-                            <constraint firstItem="Oye-2e-Pkm" firstAttribute="trailing" secondItem="4kz-ku-3b3" secondAttribute="trailing" constant="-121" id="h3N-Kv-77D"/>
+                            <constraint firstItem="Oye-2e-Pkm" firstAttribute="trailing" secondItem="4kz-ku-3b3" secondAttribute="trailing" id="h3N-Kv-77D"/>
                             <constraint firstItem="Bkm-eb-Ycy" firstAttribute="leading" secondItem="88z-B4-jGW" secondAttribute="leading" id="j4c-JZ-qmI"/>
                             <constraint firstItem="Bkm-eb-Ycy" firstAttribute="trailing" secondItem="88z-B4-jGW" secondAttribute="trailing" id="krU-9v-0qZ"/>
                             <constraint firstItem="aSR-am-zAe" firstAttribute="leading" secondItem="4kz-ku-3b3" secondAttribute="leading" id="ofh-2K-fUg"/>
